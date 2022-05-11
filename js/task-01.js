@@ -1,4 +1,10 @@
-const item = document.querySelectorAll(".item h2");
-console.log(`Number of categories: ${item.length}`);
+const refs = {
+  item: document.querySelectorAll(".item"),
+  heading: document.querySelectorAll(".item h2"),
+}
+const summ = `Number of categories: ${refs.item.length}`;
+console.log(summ);
 
-console.log(`Category: ${item.value} `)
+const categories = refs.heading.forEach(element => 
+  console.log (`Category: ${element.textContent}
+Elements: ${element.nextElementSibling.children.length}`));
